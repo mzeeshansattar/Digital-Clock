@@ -18,23 +18,27 @@
 
 #time {
   display: flex;
-  gap: 40px;
+  flex-direction: column; /* Adjusted for mobile layout */
+  align-items: center; /* Adjusted for mobile layout */
+  gap: 20px; /* Reduced gap for mobile layout */
   color: #fff;
 }
 
 #time .circle {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 80vw; /* Adjusted width for mobile devices */
+  max-width: 150px; /* Limit width for larger screens */
+  height: 80vw; /* Adjusted height for mobile devices */
+  max-height: 150px; /* Limit height for larger screens */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #time .circle svg {
-  position: relative;
-  width: 150px;
-  height: 150px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   transform: rotate(270deg);
 }
 
@@ -87,9 +91,9 @@
   content: '';
   position: absolute;
   top: -3px;
-  width: 15px;
-  height: 15px;
+  width: 10px; /* Adjusted dot size for mobile devices */
+  height: 10px; /* Adjusted dot size for mobile devices */
   background: var(--color);
   border-radius: 50%;
-  box-shadow: 0 0 20px var(--color), 0 0 60px var(--color  );
+  box-shadow: 0 0 15px var(--color), 0 0 40px var(--color);
 }
